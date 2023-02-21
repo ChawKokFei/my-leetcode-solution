@@ -4,7 +4,7 @@ class Solution:
         high = len(nums) - 1
 
         # Binary search
-        # Iterative method
+        # Iteration method
         while low <= high:
             # // integer division
             mid = low + ((high - low) // 2)
