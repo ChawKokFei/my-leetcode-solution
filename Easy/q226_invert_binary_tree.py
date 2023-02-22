@@ -7,6 +7,11 @@ class TreeNode:
 
 class Solution:
     def invertTree(self, root: TreeNode) -> TreeNode:
+        # head recursive
+        # recursion occurs before process to get to the bottom
+        # then swap the left and right nodes starting from the leaf nodes
+
+        # base case
         if root is None:
             return None
 
