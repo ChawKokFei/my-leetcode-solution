@@ -4,9 +4,9 @@ from collections import defaultdict
 
 class Solution:
     def minJumps(self, arr: list[int]) -> int:
-        # Using breadth first search, a tree is constructed
+        # Using breadth first search, a graph is constructed
         # the lowest number of steps required to reach the
-        # destination is simply the depth of the tree
+        # destination is simply the layer of the graph explored
         #
         # dfs is not used because it has worse performance
         #
@@ -46,29 +46,24 @@ class Solution:
                 if currentIndex == targetIndex:
                     return steps
 
-                # previousAdjIndex = currentIndex - 1
-                # nextAdjIndex = currentIndex + 1
+                previousAdjIndex = currentIndex - 1
+                nextAdjIndex = currentIndex + 1
 
-                # if previousAdjIndex >= 0 and not visited[previousAdjIndex]:
-                #     queue.append(previousAdjIndex)
+                if previousAdjIndex >= 0 and not visited[previousAdjIndex]:
+                    queue.append(previousAdjIndex)
 
-                # if nextAdjIndex < targetIndex + 1 and not visited[nextAdjIndex]:
-                #     queue.append(nextAdjIndex)
+                if nextAdjIndex < targetIndex + 1 and not visited[nextAdjIndex]:
+                    queue.append(nextAdjIndex)
 
-                # Using this made the overall time complexity O(n^2) which is > 10^9 (TLE)
-                # for index in valueAndIndices[arr[currentIndex]]:
-                #     if not visited[index]:
-                #         queue.append(index)
-
-                tempNextIndicesToVisit = valueAndIndices[arr[currentIndex]]
-                tempNextIndicesToVisit.append(currentIndex - 1)
-                tempNextIndicesToVisit.append(currentIndex + 1)
-
-                for index in tempNextIndicesToVisit:
-                    if 0 <= index < targetIndex + 1 and not visited[index]:
+                for index in valueAndIndices[arr[currentIndex]]:
+                    if not visited[index]:
                         queue.append(index)
 
-                tempNextIndicesToVisit.clear()
+                # clear the list to prevent redundant search
+                # since when any of the index for the value
+                # is met, all the indices will already be
+                # enqueued
+                valueAndIndices[arr[currentIndex]].clear()
 
                 currentQueueLen -= 1
             steps += 1
