@@ -63,6 +63,7 @@ class Solution:
                 # since when any of the index for the value
                 # is met, all the indices will already be
                 # enqueued
+                # https://leetcode.com/problems/jump-game-iv/solutions/3257792/C++-oror-Simple-BFS-oror-Reason-to-clear-the-map-explained-with-image/
                 valueAndIndices[arr[currentIndex]].clear()
 
                 currentQueueLen -= 1
