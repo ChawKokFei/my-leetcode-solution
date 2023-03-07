@@ -1,5 +1,6 @@
 class Solution:
     def minimumTime(self, time: List[int], totalTrips: int) -> int:
+        # Binary search for searching the best time
         left = 1
         right = min(time) * totalTrips
 
