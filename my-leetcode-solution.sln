@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Easy", "Easy", "{C1DE1F27-D7AC-431D-BCDB-660D2C8E9DBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{7D3B2134-8994-4F4A-AE71-DC23D4C82C50}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "q67-add-binary", "Easy\CSharp\q67-add-binary\q67-add-binary.csproj", "{CE74F5EA-FCD7-4777-AF32-61793526C970}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE74F5EA-FCD7-4777-AF32-61793526C970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE74F5EA-FCD7-4777-AF32-61793526C970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE74F5EA-FCD7-4777-AF32-61793526C970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE74F5EA-FCD7-4777-AF32-61793526C970}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D3B2134-8994-4F4A-AE71-DC23D4C82C50} = {C1DE1F27-D7AC-431D-BCDB-660D2C8E9DBC}
+		{CE74F5EA-FCD7-4777-AF32-61793526C970} = {7D3B2134-8994-4F4A-AE71-DC23D4C82C50}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAB33BE1-9A55-488C-964E-B053D7AA7321}
+	EndGlobalSection
+EndGlobal
